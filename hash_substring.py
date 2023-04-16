@@ -4,21 +4,21 @@ def read_input():
 
     mode = input().strip()
 
-    if mode == "I":
+    if mode not in ['F', 'I']:
+        raise ValueError("Invalid input")
 
-        text = input().strip()
-        pattern = input().strip()
-
-    elif mode == "F":
+    if mode == "F":
         try:
 
-            with open("./tests/06") as r:
+             with open("./tests/06") as r:
 
                 pattern = r.readline().strip()
                 text = r.readline().strip()
 
     else:
-        raise ValueError("Invalid input")
+
+        text = input().strip()
+        pattern = input().strip()
 
     return pattern, text
 
