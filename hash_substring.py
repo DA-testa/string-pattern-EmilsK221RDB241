@@ -2,20 +2,21 @@
 
 def read_input():
     
+   
     mode = input().strip()
 
     if mode == "I":
 
-        text_is = input().strip()
-        pattern_is = input().strip()
+        text = input().strip()
+        pattern = input().strip()
 
     elif mode == "F":
         try:
 
             with open("./tests/06") as r:
 
-                pattern_s = r.readline().strip()
-                text_s = r.readline().strip()
+                pattern = r.readline().strip()
+                text = r.readline().strip()
 
         except FileNotFoundError:
 
@@ -25,7 +26,7 @@ def read_input():
     else:
         raise ValueError("Invalid input")
 
-    return pattern_s, text_s
+    return pattern, text
 
 
 def print_occurrences(output):
