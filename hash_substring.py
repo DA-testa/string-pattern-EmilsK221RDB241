@@ -42,7 +42,7 @@ def get_occurrences(pattern, text):
 
     x = []
 
-    for n in range(text_l - pattern_l + 1):
+    for n in range(0, text_l - pattern_l + 1):
 
         if text_h == pattern_h and pattern == text[n: n + pattern_l]:
             x.append(n)
