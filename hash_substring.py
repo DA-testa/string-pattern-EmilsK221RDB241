@@ -4,26 +4,19 @@ def read_input():
 
     mode = input().strip()
 
-    if mode not in ['F', 'I']:
-        raise ValueError("Invalid input")
-
-    if mode == "F":
-        try:
-            
-            with open("./tests/06") as r:
-                
-                pattern = r.readline().strip()
-                text = r.readline().strip()
-                
-        except FileNotFoundError:
-            
-            print("File doesn't exist")
-            exit()
-
-    else:
+    if mode == "I":
 
         text = input().strip()
         pattern = input().strip()
+
+    elif mode == "F":
+        with open("./tests/06") as f:
+
+            text = f.readline().strip()
+            pattern = f.readline().strip()
+
+    else:
+        raise ValueError("Invalid input")
 
     return pattern, text
 
