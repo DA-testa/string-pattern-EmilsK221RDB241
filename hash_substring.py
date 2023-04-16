@@ -48,7 +48,8 @@ def get_occurrences(pattern, text):
             x.append(n)
 
         if n < text_l - pattern_l:
-            text_h = hash(text[n + 1: n + pattern_l + 1])
+            text_h -= ord(text[n])
+            text_h += ord(text[n + pattern_l])
 
     return x
 
