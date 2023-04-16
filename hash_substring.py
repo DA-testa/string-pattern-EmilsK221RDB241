@@ -25,7 +25,7 @@ def read_input():
     else:
         raise ValueError("Invalid input")
 
-    return pattern, text
+    return pattern_s, text_s
 
 
 def print_occurrences(output):
