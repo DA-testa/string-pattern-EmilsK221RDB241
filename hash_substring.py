@@ -14,10 +14,10 @@ def read_input():
     else:
         try:
 
-        with open("./tests/06") as f:
+            with open("./tests/06") as f:
 
-            pattern = f.readline().strip()
-            text = f.readline().strip()
+                pattern = f.readline().strip()
+                text = f.readline().strip()
 
     except FileNotFoundError:
                          
