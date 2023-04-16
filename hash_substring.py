@@ -9,11 +9,16 @@ def read_input():
 
     if mode == "F":
         try:
-
-             with open("./tests/06") as r:
-
+            
+            with open("./tests/06") as r:
+                
                 pattern = r.readline().strip()
                 text = r.readline().strip()
+                
+        except FileNotFoundError:
+            
+            print("File doesn't exist")
+            exit()
 
     else:
 
