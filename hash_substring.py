@@ -8,8 +8,11 @@ def read_input():
 
     if mode == "I":
 
-        text = input().strip()
-        pattern = input().strip()
+        pattern_s = input()
+        text_s = input()
+
+        pattern = pattern_s().strip()
+        text = text_s().strip()
 
     else:
         try:
@@ -42,14 +45,13 @@ def get_occurrences(pattern, text):
 
     x = []
 
-    for n in range(0, text_l - pattern_l + 1):
+    for n in range(text_l - pattern_l + 1):
 
-        if text_h == pattern_h and pattern == text[n: n + pattern_l]:
+        if pattern_h == text_h and pattern == text[n: n + pattern_l]:
             x.append(n)
 
         if n < text_l - pattern_l:
-            text_h -= ord(text[n])
-            text_h += ord(text[n + pattern_l])
+            text_h = hash(text[n + 1: n + pattern_l + 1])
 
     return x
 
