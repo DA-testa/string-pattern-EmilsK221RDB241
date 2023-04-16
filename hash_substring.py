@@ -8,11 +8,11 @@ def read_input():
 
     if mode == "I":
 
-        pattern_s = input()
-        text_s = input()
+        pattern_in = input()
+        text_in = input()
 
-        pattern = pattern_s().strip()
-        text = text_s().strip()
+        pattern = pattern_in().strip()
+        text = text_in().strip()
 
     else:
         try:
