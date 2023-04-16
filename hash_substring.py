@@ -1,5 +1,6 @@
 # python3
-
+def read_input():
+    
     mode = input().strip()
 
     if mode not in ['F', 'I']:
