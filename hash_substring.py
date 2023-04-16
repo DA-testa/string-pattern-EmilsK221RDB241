@@ -4,7 +4,7 @@ def read_input():
     mode = input().strip()
 
     if mode not in ['F', 'I']:
-        raise ValueError("Invalid input"}
+        raise ValueError("Invalid input")
 
     if mode == "I":
 
