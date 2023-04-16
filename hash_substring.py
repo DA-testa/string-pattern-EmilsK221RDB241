@@ -19,10 +19,10 @@ def read_input():
                 pattern = f.readline().strip()
                 text = f.readline().strip()
 
-    except FileNotFoundError:
+        except FileNotFoundError:
                          
-        print("File doesn't exist")
-        exit()
+            print("File doesn't exist")
+            exit()
 
     return pattern, text
 
