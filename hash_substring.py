@@ -1,22 +1,27 @@
 # python3
 
-def read_input():
-
     mode = input().strip()
+
+    if mode not in ['F', 'I']:
+        raise ValueError("Invalid input"}
 
     if mode == "I":
 
         text = input().strip()
         pattern = input().strip()
 
-    elif mode == "F":
+    else:
+        try:
+
         with open("./tests/06") as f:
 
-            text = f.readline().strip()
             pattern = f.readline().strip()
+            text = f.readline().strip()
 
-    else:
-        raise ValueError("Invalid input")
+    except FileNotFoundError:
+                         
+        print("File doesn't exist")
+        exit()
 
     return pattern, text
 
