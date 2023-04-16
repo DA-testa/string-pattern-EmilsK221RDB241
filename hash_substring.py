@@ -30,8 +30,14 @@ def read_input():
 
 def print_occurrences(output):
     
-    print(' '.join(map(str, output)))
-
+    if output:
+        
+        print(' '.join(map(str, output)))
+        
+    else:
+        
+        print("Pattern not found in text")
+    
     
 def get_occurrences(pattern, text):
 
