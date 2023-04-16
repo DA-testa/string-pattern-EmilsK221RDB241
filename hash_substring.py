@@ -1,8 +1,7 @@
 # python3
 
 def read_input():
-    
-   
+
     mode = input().strip()
 
     if mode == "I":
@@ -17,11 +16,6 @@ def read_input():
 
                 pattern = r.readline().strip()
                 text = r.readline().strip()
-
-        except FileNotFoundError:
-
-            print("File doesnt exist")
-            exit()
 
     else:
         raise ValueError("Invalid input")
