@@ -36,8 +36,8 @@ def print_occurrences(output):
     
 def get_occurrences(pattern, text):
     
-    text_l = len(text)
     pattern_l = len(pattern)
+    text_l = len(text)
 
     pattern_h = hash(pattern)
     text_h = hash(text[:pattern_l])
@@ -46,12 +46,12 @@ def get_occurrences(pattern, text):
 
     for i in range(text_l - pattern_l + 1):
 
-        if pattern_h == text_h and pattern == text[i:i + pattern_l]:
+        if text_h == pattern_h and pattern == text[i:i + pattern_l]:
             x.append(i)
 
         if i < text_l - pattern_l:
-            text_h -= hash(text[i + 1:i + pattern_l + 1])
-            
+            text_h = hash(text[i + 1:i + pattern_l + 1])
+
     return x
 
 
